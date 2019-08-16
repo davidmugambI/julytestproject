@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Login Form {% endblock %}
+    {% load crispy_forms_tags %}
+{% block body %}
+
+<form action="" method="post" style="color: black">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="Login" class="btn btn-primary">
+
+    <a class="bg-dark" href="{% url 'password_reset' %}">Forgot password?</a>
+
+    <a href="{% url 'register' %}" class="btn btn-warning">
+        I don't have an account</a>
+</form>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %} HTML FORM {% endblock %}
+
+{% block body %}
+
+<div class="container">
+<form action="" method="post" class="col-md-4 offset-4 bg-warning">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="studentName">studentName:</label>
+        <input type="text" id="studentName" class="form-control"
+               maxlength="10" name="studentName" required>
+    </div>
+
+    <div class="form-group">
+        <label for="course">course:</label>
+        <input type="text" id="course" class="form-control" name="course" required>
+
+    </div>
+    <div class="form-group">
+        <label for="age">age:</label>
+        <input type="number" id="age" class="form-control" name="age" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">email:</label>
+        <input type="email" id="email" class="form-control" name="email" required>
+
+    </div>
+
+    <div class="form-group">
+        <input type="submit" class="form-control" value="Submit data">
+    </div>
+
+
+    <!-- CSS STYLING -->
+    {#    <label for="studentName">studentName:</label>#}
+    {#    <input type="text" id="studentName"#}
+    {#           maxlength="10" name="studentName" required>#}
+    {#     <label for="course">course:</label>#}
+    {#    <input type="text" id="course" name="course" required>#}
+    {#     <label for="age">age:</label>#}
+    {#    <input type="number" id="age" name="age" required>#}
+    {#     <label for="email">email:</label>#}
+    {#    <input type="email" id="email" name="email" required>#}
+    {#    <input type="submit" value="Submit data">#}
+</form>
+</div>
+{% endblock %}
